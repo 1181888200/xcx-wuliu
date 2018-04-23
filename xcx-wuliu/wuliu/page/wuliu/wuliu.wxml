@@ -1,0 +1,91 @@
+ 
+<view class="container">
+ 
+
+  <view class="page-body">
+          <view class="page-body-info" style='padding:0px'>
+          <!--用户头像-->
+         <block wx:if="{{userInfo.avatarUrl}}">
+            <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
+            <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        </block>
+        </view>
+
+
+           <view class="weui-cells__title">扫码结果</view>
+          <view class="weui-cells weui-cells_after-title">
+                <view class="weui-cell">
+                     <view class="weui-cell__bd">{{result}}</view>
+                </view>
+          </view>
+          <view class="btn-area">
+               <button type="primary" bindtap="scanCode">扫一扫</button>
+          </view>
+    
+ 
+  <!--地理位置-->
+       <view class="page-section">
+        <view class="page-body-info">
+              <text class="page-body-text-small">当前系统位置：（{{systemLocation}}）</text>
+              <block wx:if="{{hasLocation === false}}">
+                <text class="page-body-text">未选择位置</text>
+              </block>
+            <block wx:if="{{hasLocation === true}}">
+                        <text class="page-body-text">{{locationAddress}}</text>
+                        <view class="page-body-text-location">
+                      
+                          <text>({{location}})</text>
+                        </view>
+            </block>
+        </view>
+
+        <view class="btn-area">
+          <button type="primary" bindtap="chooseLocation">选择位置</button>
+          <button bindtap="clear">清空</button>
+        </view>
+
+    </view>
+
+ <!--设备基本信息-->
+
+ 
+    <view class="page-section">
+      
+      <view class="weui-cells weui-cells_after-title">
+        
+            <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__hd">
+                      <view class="weui-label">手机型号</view>
+                    </view>
+                      <view class="weui-cell__bd">
+                        <input class="weui-input" type="text" disabled="{{true}}" placeholder="未获取" value="{{systemInfo.model}}"></input>
+                      </view>
+            </view>
+      
+              <view class="weui-cell weui-cell_input">
+                      <view class="weui-cell__hd">
+                        <view class="weui-label">微信版本</view>
+                      </view>
+                      <view class="weui-cell__bd">
+                        <input class="weui-input" type="text" disabled="{{true}}" placeholder="未获取" value="{{systemInfo.version}}"></input>
+                      </view>
+              </view>
+      
+            <view class="weui-cell weui-cell_input">
+                      <view class="weui-cell__hd">
+                        <view class="weui-label">基本信息</view>
+                      </view>
+                    <view class="weui-cell__bd">
+                      <textarea auto-height style='width:auto'>{{systemInfoStr}}</textarea>
+                    </view>
+              </view>
+
+      </view>
+
+       
+    </view>
+
+      </view>
+  </view>
+ 
+

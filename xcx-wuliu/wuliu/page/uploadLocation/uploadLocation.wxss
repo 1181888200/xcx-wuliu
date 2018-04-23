@@ -1,0 +1,11 @@
+@import '../common/lib/weui.wxss'
+
+.weui-cell__hd{
+  width: 48%;
+  margin-right: 2%;
+}
+
+.success {
+  background-color: #BF3EFF;
+  color: #ffffff;
+}

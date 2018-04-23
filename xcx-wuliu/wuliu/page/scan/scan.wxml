@@ -1,0 +1,6 @@
+<view class="shake_box">
+  <view class='imgView dial_wp'>
+    <image src='./images/scan-1.png' bindtap='scanInfo' style='-webkit-transform:rotate(0deg) translateZ(0);transform:rotate(0deg) translateZ(0)' class='img'></image>    
+  </view>
+  
+</view>

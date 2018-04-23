@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "page/scan/scan",
+    "page/wuliu/wuliu",
+    "page/person/person",
+    "page/uploadLocation/uploadLocation"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "物流跟踪",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "page/scan/scan",
+        "iconPath": "image/icon_component.png",
+        "selectedIconPath": "image/icon_component_HL.png",
+        "text": "扫码"
+      },
+      {
+        "pagePath": "page/person/person",
+        "iconPath": "image/person.png",
+        "selectedIconPath": "image/personHL.png",
+        "text": "用户"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": false
+}

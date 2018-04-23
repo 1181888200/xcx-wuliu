@@ -1,0 +1,49 @@
+<!--page/uploadLocation.wxml-->
+ 
+<view class="container">
+ 
+
+  <view class="page-body">
+      <!--地理位置-->
+       <view class="page-section">
+            <view class="page-body-info">
+                  <text class="page-body-text-small">当前系统位置：（{{systemLocation}}）</text>
+                  <block wx:if="{{hasLocation === false}}">
+                    <text class="page-body-text">未选择位置</text>
+                  </block>
+                <block wx:if="{{hasLocation === true}}">
+                            <text class="page-body-text">{{locationAddress}}</text>
+                            <view class="page-body-text-location">
+                              <text>({{location}})</text>
+                            </view>
+                </block>
+            </view>
+
+            <!-- <view class="btn-area">
+              <button type="primary" bindtap="chooseLocation">选择位置</button>
+            </view> -->
+      </view>
+      <!--地理位置 end-->
+
+ 
+
+       <view class="btn-area">
+          
+              <view class="page-section">
+                <view class="weui-cell ">
+                <view class="weui-cell__hd">
+                        <button type="primary"  bindtap="chooseLocation">位置推送</button>
+                </view>
+                <view class="weui-cell__bd">
+                    <button class="success"  bindtap="uploadData">送货完成</button>
+                </view>
+                </view>
+            </view>
+
+             
+              
+              
+      </view>
+
+    </view>
+ </view>
